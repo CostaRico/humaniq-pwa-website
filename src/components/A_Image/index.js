@@ -57,8 +57,9 @@ class A_Image extends Component {
     const {onClick, objectFit, ...props} = preProps;
     const complete = !!this.node && this.node.complete;
     const imgReady = complete || this.state.imgReady;
+    const isProgressive = src.search('.jpeg|.jpg') !== -1;
     rounded = rounded && 'rounded';
-    link = link && 'link'
+    link = link && 'link';
     realSize = realSize && 'real-size';
 
     return (
@@ -67,17 +68,13 @@ class A_Image extends Component {
           <source srcSet={this.prepareRetina(src, srcSet)}/>
           <img
             ref={ node => this.node = node }
-            className={cn('img', {onClick: !!onClick, objectFit, type}, [rounded, link, realSize])}
+            className={cn('img', {onClick: !!onClick, objectFit, type, blur: isProgressive && !imgReady}, [rounded, link, realSize])}
             onLoad = {this.handleLoad}
-            style={imgReady ? {} : {display: 'none'}}
             onClick={onClick}
             src={src}
             {...props}
           />
         </picture>
-        <div style={imgReady ? {display: 'none'} : {}} className={cn('loader')} >
-          {/*loading*/}
-        </div>
       </span>
     )
   }

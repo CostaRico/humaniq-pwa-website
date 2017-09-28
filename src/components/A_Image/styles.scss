@@ -26,6 +26,7 @@
     object-fit: cover;
     text-align: center;
     vertical-align: top;
+    transition: filter .3s linear;
 
     &_type{
       &_avatar {
