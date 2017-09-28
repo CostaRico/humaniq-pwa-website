@@ -28,6 +28,12 @@
     vertical-align: top;
     transition: filter .3s linear;
 
+    &_blur {
+      &_true {
+        filter:blur(10px);
+      }
+    }
+
     &_type{
       &_avatar {
         width: 8rem;
