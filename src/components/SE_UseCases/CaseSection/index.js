@@ -41,7 +41,7 @@ const SE_UseCasesList = ({title, introduction, img, solution, spaceTop}) =>{
         <A_H type='section-sub'>Introduction</A_H>
         <A_P type='third'>{introduction}</A_P>
         <div className={cn('image')}>
-          <A_Image src={img} alt={title} />
+          <A_Image src={img} alt={title}/>
         </div>
         <A_H type='section-sub'>Humaniq Solution</A_H>
         <A_P type='third'>{solution}</A_P>

@@ -25,25 +25,56 @@ class A_Image extends Component {
     }
   }
 
+  prepareRetina = (imgPath, retinaMax = 1) => {
+    retinaMax = retinaMax === true ? (2) : (retinaMax);
+    const
+      pathArray = imgPath.split('.'),
+      imgType = pathArray.pop(-1),
+      pathStr = pathArray.join('.');
+
+    let retinaPaths;
+
+    switch(imgType) {
+      case 'svg':
+        retinaPaths = `${pathStr}.${imgType}`;
+        break;
+      default:
+        let result = [];
+        for(let i=1; i<=retinaMax; i++) {
+          i === 1 ? (
+            result = [...result, `${pathStr}.${imgType} ${i}x`]
+          ):(
+            result = [...result, `${pathStr}@${i}.${imgType} ${i}x`]
+          );
+        }
+        retinaPaths = result.join(', ');
+    }
+    return retinaPaths
+  };
+
   render() {
-    let {rounded, realSize, link, type, ...preProps} = this.props
-    const {onClick, objectFit, ...props} = preProps
-    const complete = !!this.node && this.node.complete
-    const imgReady = complete || this.state.imgReady
-    rounded = rounded && 'rounded'
+    let {rounded, realSize, link, type, src, srcSet, ...preProps} = this.props;
+    const {onClick, objectFit, ...props} = preProps;
+    const complete = !!this.node && this.node.complete;
+    const imgReady = complete || this.state.imgReady;
+    rounded = rounded && 'rounded';
     link = link && 'link'
-    realSize = realSize && 'real-size'
+    realSize = realSize && 'real-size';
 
     return (
       <span className={cn('root')} >
-        <img
-          ref={ node => this.node = node }
-          className={cn('img', {onClick: !!onClick, objectFit, type}, [rounded, link, realSize])}
-          onLoad = {this.handleLoad}
-          style={imgReady ? {} : {display: 'none'}}
-          onClick={onClick}
-          {...props}
-        />
+        <picture>
+          <source srcSet={this.prepareRetina(src, srcSet)}/>
+          <img
+            ref={ node => this.node = node }
+            className={cn('img', {onClick: !!onClick, objectFit, type}, [rounded, link, realSize])}
+            onLoad = {this.handleLoad}
+            style={imgReady ? {} : {display: 'none'}}
+            onClick={onClick}
+            src={src}
+            {...props}
+          />
+        </picture>
         <div style={imgReady ? {display: 'none'} : {}} className={cn('loader')} >
           {/*loading*/}
         </div>
@@ -54,6 +85,7 @@ class A_Image extends Component {
 
 A_Image.propTypes = {
   src: T.string.isRequired,
+  srcSet: T.bool || T.number,
   alt: T.string.isRequired,
   width: T.number,
   height: T.number,
