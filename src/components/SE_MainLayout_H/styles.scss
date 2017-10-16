@@ -1,0 +1,32 @@
+@import "common/settings/variables";
+@import "common/utils";
+
+.se-main-layout-h {
+  &__header,  &__sidebar, &__mobile-menu {
+    position: fixed;
+    z-index: 999;
+  }
+
+  &__header, &__mobile-menu {
+    top: 0;
+    left: 0;
+  }
+
+  &__mobile-menu {
+    display: none;
+    @include media($desktop-xl) {
+      display: block;
+    }
+  }
+
+  &__sidebar {
+    right: -128px;
+    top: 51.3%;
+    transform: rotate(-90deg);
+    @include media($desktop-xxl) {
+      top: 44.5%;
+      right: -90px;
+    }
+  }
+
+}

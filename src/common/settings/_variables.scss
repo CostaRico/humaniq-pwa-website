@@ -135,8 +135,10 @@ $gray-8: #c5c5c5;
 
 // DIMENSIONS
 
+$w-desktop-xxl: 1600px;
+$w-desktop-xl: 1120px;
+$w-desktop-wide: $w-desktop-xl;
 $w-desktop: 980px;
-$w-desktop-wide: 1120px;
 $w-tablet: 768px;
 $w-mobile: 288px;
 
@@ -150,6 +152,8 @@ $p-desktop: 2rem;
 
 // MEDIA QUERIES
 
+$desktop-xxl: "max-width: #{$w-desktop-xxl}";
+$desktop-xl: "max-width: #{$w-desktop-xl}";
 $desktop: "min-width: #{$w-desktop}";
 $tablet: "max-width: #{$w-desktop - 1px}";
 $mobile: "max-width: #{$w-tablet - 1px}";

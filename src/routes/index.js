@@ -39,11 +39,11 @@ const getRoutes = (store) => {
     <Route
       path="/"
       component={App}
-      prepareData={App.prepareData}
+      //prepareData={App.prepareData}
     >
       <IndexRoute
         component={Home}
-        prepareData={Home.prepareData}
+        //prepareData={Home.prepareData}
       />
       <Route
         path="test-animated-home"

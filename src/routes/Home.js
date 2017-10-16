@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import HomeContainer from 'containers/HomeContainer'
+import HomeContainer_H from 'containers/HomeContainer_H'
 import initialLoad from 'utils/initialLoad'
 
 class HomeRoute extends Component {
@@ -10,7 +10,7 @@ class HomeRoute extends Component {
 
   render() {
     return (
-      <HomeContainer />
+      <HomeContainer_H />
     )
   }
 }

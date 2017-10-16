@@ -1,0 +1,24 @@
+@import "common/settings/variables";
+@import "common/utils";
+
+.se-home-section-counter {
+  position: absolute;
+  top: 31.2%;
+  left: 7.6%;
+  font-family: Celdum,sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  transform: rotate(-90deg);
+  &_theme {
+    &_dark {
+      color: #000;
+    }
+    &_blue {
+      color: #58a1fc;
+    }
+  }
+  @include media($desktop-xxl) {
+    top: 25%;
+    font-size: 24px;
+  }
+}

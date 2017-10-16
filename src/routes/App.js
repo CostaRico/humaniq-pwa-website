@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import * as T from "prop-types";
-import MainLayoutContainer from 'containers/MainLayoutContainer'
+import MainLayoutContainer_H from 'containers/MainLayoutContainer_H'
 import initialLoad from 'utils/initialLoad'
 import {setRoute} from 'store/entities/navigation/actions'
 import {fetchWiki} from 'store/entities/wikiArticles/actions';
@@ -26,9 +26,9 @@ class AppRoute extends Component {
 
   render() {
     return (
-      <MainLayoutContainer>
+      <MainLayoutContainer_H>
         {this.props.children}
-      </MainLayoutContainer>
+      </MainLayoutContainer_H>
     )
   }
 }
