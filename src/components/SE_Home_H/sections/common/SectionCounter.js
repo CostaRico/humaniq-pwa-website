@@ -17,6 +17,6 @@ SE_Home_SectionCounter.propTypes = {
   sectionNum: T.number.isRequired,//section number to render
   theme: T.oneOf([
     'dark', // black counter
-    'blue', // sky-blue counter
+    'bright', // sky-blue counter
   ]).isRequired
 };

@@ -13,12 +13,39 @@
     &_dark {
       color: #000;
     }
-    &_blue {
+    &_bright {
       color: #58a1fc;
     }
   }
   @include media($desktop-xxl) {
     top: 25%;
     font-size: 24px;
+  }
+  @include media($tablet) {
+    top: 125px;
+    left: 10px;
+  }
+}
+
+
+.se-home-section-button {
+  padding: 15px 22px;
+  line-height: 1;
+  color: #58a1fc;
+  border: 2px solid #58a1fc;
+  font-family: ProximaNova,sans-serif;
+  font-weight: 700;
+  font-size: 16.5px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  transition: background-color .3s,color .2s linear;
+  cursor: pointer;
+  &:hover {
+    background-color: #58a1fc;
+    color: #fff;
+  }
+  @include media($desktop-xxl) {
+    padding: 9px 15px;
+    font-size: 12px;
   }
 }

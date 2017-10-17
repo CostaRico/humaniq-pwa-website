@@ -2,7 +2,7 @@ import React from 'react'
 import * as T from "prop-types";
 import './styles.scss'
 import A_Logo from 'A_Logo'
-import BurgerBtn from './BurgerBtn'
+import A_BurgerBtn from 'A_BurgerBtn_H'
 import {cssClassName} from 'utils'
 
 const cn = cssClassName('SE_MainLayoutHeader_H')
@@ -31,9 +31,9 @@ const SE_MainLayoutHeader_H = ({mix, menuLinks, mobileMenuIsActive, toggleMobile
       {_getMenuLinks(menuLinks)}
     </ul>
 
-    <BurgerBtn
+    <A_BurgerBtn
       mix = {cn('menu-btn')}
-      toggleMobileMenu = {toggleMobileMenu}
+      onClick = {toggleMobileMenu}
       isActive = {mobileMenuIsActive}
     />
   </header>

@@ -141,6 +141,7 @@ $w-desktop-wide: $w-desktop-xl;
 $w-desktop: 980px;
 $w-tablet: 768px;
 $w-mobile: 288px;
+$w-mobile-xs: 432px;
 
 $identation: 2rem;
 $header-height: 12.2rem;
@@ -157,4 +158,5 @@ $desktop-xl: "max-width: #{$w-desktop-xl}";
 $desktop: "min-width: #{$w-desktop}";
 $tablet: "max-width: #{$w-desktop - 1px}";
 $mobile: "max-width: #{$w-tablet - 1px}";
+$mobile-xs: "max-width: #{$w-mobile-xs}";
 $mobile-up: "min-width: #{$w-tablet}";

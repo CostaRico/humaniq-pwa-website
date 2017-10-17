@@ -1,0 +1,57 @@
+.se-home-unbanked-stat {
+  display: flex;
+  &__left-side {
+    flex: 0 0 52%;
+  }
+
+  &__right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+	padding-right: 30px;
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://lp.humaniq.com/img/perspective-map.jpg);
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position: 5px 250px;
+    font-size: 0;
+  }
+
+  &__text {
+    margin-bottom: 95px;
+    font-family: ProximaNova,sans-serif;
+    font-size: 31px;
+    line-height: 1.4;
+    color: #a9aeb2;
+  }
+
+  &__stat-circle {
+    width: 412px;
+    height: 412px;
+    padding: 95px 0;
+    border: 5px solid rgba(113,175,252,.3);
+    border-radius: 50%;
+    text-align: center;
+    color: #0070d6;
+    &-percentage {
+      margin-bottom: 10px;
+	  line-height: 1;
+      font-size: 110px;
+      font-family: Celdum,sans-serif;
+      font-weight: 800;
+    }
+    &-text {
+      font-family: ProximaNova,sans-serif;
+      font-weight: 700;
+      font-size: 31px;
+      line-height: 1.2;
+      color: #0070d6;
+    }
+  }
+}

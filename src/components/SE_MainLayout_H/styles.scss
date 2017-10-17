@@ -12,13 +12,6 @@
     left: 0;
   }
 
-  &__mobile-menu {
-    display: none;
-    @include media($desktop-xl) {
-      display: block;
-    }
-  }
-
   &__sidebar {
     right: -128px;
     top: 51.3%;

@@ -1,6 +1,18 @@
+@import "common/settings/variables";
+@import "common/utils";
+
 .se-home-h {
   position: relative;
   &__section {
+    position: relative;
     height: 100vh;
+    @include media($tablet) {
+      display: block;
+      height: auto;
+      padding: 180px 30px 90px;
+    }
+    @include media($mobile-xs) {
+      padding: 200px 15px 60px;
+    }
   }
 }

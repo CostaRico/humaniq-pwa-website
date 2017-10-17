@@ -5,6 +5,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &__menu-btn {
+    display: none;
+    @include media($desktop-xl) {
+      display: block;
+    }
+  }
+
   &__menu {
     display: flex;
     margin-right: 17.2%;

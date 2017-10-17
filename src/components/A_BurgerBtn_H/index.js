@@ -3,12 +3,12 @@ import * as T from "prop-types";
 import './styles.scss'
 import {cssClassName} from 'utils'
 
-const cn = cssClassName('SE_MainLayout_Header_BurgerBtn');
+const cn = cssClassName('A_BurgerBtn');
 
-const SE_MainLayout_Header_BurgerBtn = ({mix, isActive, toggleMobileMenu}) => (
+const A_BurgerBtn = ({mix, isActive, onClick}) => (
   <div
     className = {cn([mix], {isActive})}
-    onClick = {() =>{toggleMobileMenu()}}
+    onClick = {() =>{onClick()}}
   >
     <div className = {cn('line',{position:'top'})} />
     <div className = {cn('line',{position:'middle'})} />
@@ -16,9 +16,9 @@ const SE_MainLayout_Header_BurgerBtn = ({mix, isActive, toggleMobileMenu}) => (
   </div>
 )
 
-export default SE_MainLayout_Header_BurgerBtn
+export default A_BurgerBtn
 
-SE_MainLayout_Header_BurgerBtn.propTypes = {
+A_BurgerBtn.propTypes = {
   mix: T.string, //BEM mixin from parent block
   isActive: T.bool.isRequired //toggles btn animation
 };

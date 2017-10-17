@@ -1,9 +1,8 @@
 @import "common/settings/variables";
 @import "common/utils";
 
-.se-main-layout-header-burger-btn {
+.a-burger-btn {
   $this: &;
-  display: none;
   box-sizing: border-box;
   width: 40px;
   padding: 10px;
@@ -53,8 +52,5 @@
         transition: .4s opacity;
       }
     }
-  }
-  @include media($desktop-xl) {
-	display: block;
   }
 }
