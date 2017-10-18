@@ -160,3 +160,18 @@ $tablet: "max-width: #{$w-desktop - 1px}";
 $mobile: "max-width: #{$w-tablet - 1px}";
 $mobile-xs: "max-width: #{$w-mobile-xs}";
 $mobile-up: "min-width: #{$w-tablet}";
+
+//NEW MAIN PAGE VARIABLES
+//NEW COLORS
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-main-deep-blue: #0070d6;
+$color-main-blue: #58a1fc;
+$color-main-light-blue: #71affc;
+
+$color-text-gray: #a9aeb2;
+
+//NEW FONT STACKS
+$font-ProximaNova: ProximaNova, sans-serif;
+$font-Celdum: Celdum, sans-serif;

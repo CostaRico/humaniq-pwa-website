@@ -2,6 +2,7 @@ import React from 'react'
 import EmpoweringSection from './sections/EmpoweringSection'
 import FirstMobileSection from './sections/FirstMobileSection'
 import UnbankedStatSection from './sections/UnbankedStatSection'
+import QuotesSection from './sections/QuotesSection'
 import './styles.scss'
 import {cssClassName} from 'utils'
 
@@ -12,6 +13,7 @@ const SE_Home_H = () => (
     <EmpoweringSection mix={cn('section')} />
     <FirstMobileSection mix={cn('section')} />
     <UnbankedStatSection mix={cn('section')} />
+    <QuotesSection mix={cn('section')} />
   </div>
 )
 

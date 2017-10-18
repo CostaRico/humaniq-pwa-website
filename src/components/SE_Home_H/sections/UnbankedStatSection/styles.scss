@@ -1,3 +1,6 @@
+@import "common/settings/variables";
+@import "common/utils";
+
 .se-home-unbanked-stat {
   display: flex;
   &__left-side {
@@ -10,7 +13,11 @@
     justify-content: center;
     align-items: center;
     flex: 1 1 auto;
-	padding-right: 30px;
+    padding-right: 30px;
+    @include media($tablet) {
+      display: block;
+      padding: 0;
+    }
   }
 
   &__map {
@@ -25,10 +32,22 @@
 
   &__text {
     margin-bottom: 95px;
-    font-family: ProximaNova,sans-serif;
+    font-family: $font-ProximaNova;
     font-size: 31px;
     line-height: 1.4;
-    color: #a9aeb2;
+    color: $color-text-gray;
+    @include media($desktop-xxl) {
+      margin-bottom: 50px;
+      font-size: 22px;
+    }
+    @include media($tablet) {
+      font-size: 18px;
+    }
+    @include media($mobile) {
+      br {
+        display: none;
+      }
+    }
   }
 
   &__stat-circle {
@@ -38,20 +57,48 @@
     border: 5px solid rgba(113,175,252,.3);
     border-radius: 50%;
     text-align: center;
-    color: #0070d6;
+    color: $color-main-deep-blue;
+    @include media($desktop-xxl) {
+      width: 295px;
+      height: 295px;
+      padding: 75px 0;
+      border-width: 3px;
+    }
+    @include media($tablet) {
+      width: 196px;
+      height: 196px;
+      padding: 40px 0;
+    }
     &-percentage {
       margin-bottom: 10px;
-	  line-height: 1;
+      line-height: 1;
       font-size: 110px;
-      font-family: Celdum,sans-serif;
+      font-family: $font-Celdum;
       font-weight: 800;
+      @include media($tablet) {
+        font-size: 54px;
+      }
     }
     &-text {
-      font-family: ProximaNova,sans-serif;
+      font-family: $font-ProximaNova;
       font-weight: 700;
       font-size: 31px;
       line-height: 1.2;
-      color: #0070d6;
+      color: $color-main-deep-blue;
+      @include media($desktop-xxl) {
+        font-size: 22px;
+      }
+      @include media($tablet) {
+        font-size: 18px;
+      }
     }
   }
+
+  &__counter {
+    display: none;
+    @include media($tablet) {
+      display: block;
+    }
+  }
+
 }
