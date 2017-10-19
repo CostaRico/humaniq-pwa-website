@@ -30,9 +30,9 @@
     @include media($tablet) {
       align-items: flex-start;
     }
-	@include media($mobile) {
-	  background-image: url('https://lp.humaniq.com/img/quotes.png')!important;
-	}
+    @include media($mobile) {
+      background-image: url('https://lp.humaniq.com/img/quotes.png')!important;
+    }
 
     &-content {
       width: 700px;
@@ -43,13 +43,13 @@
         width: 490px;
       }
       @include media($tablet) {
-		width: auto;
+        width: auto;
         padding: 100px 30px 60px;
         margin-right: 0;
       }
-	  @include media($mobile-xs) {
-		padding: 100px 15px 60px;
-	  }
+      @include media($mobile-xs) {
+        padding: 100px 15px 60px;
+      }
     }
     &-title {
       margin-bottom: 55px;
@@ -59,13 +59,13 @@
       @include media($desktop-xxl) {
         font-size: 51px;
       }
-	  @include media($mobile) {
-		margin-bottom: 25px;
-		font-size: 28px;
-	  }
-	  @include media($mobile-xs) {
-		font-size: 22px;
-	  }
+      @include media($mobile) {
+        margin-bottom: 25px;
+        font-size: 28px;
+      }
+      @include media($mobile-xs) {
+        font-size: 22px;
+      }
     }
     &-text {
       margin-bottom: 68px;
@@ -74,21 +74,21 @@
       @include media($desktop-xxl) {
         font-size: 21px;
       }
-	  @include media($mobile) {
-		margin-bottom: 55px;
-		font-size: 18px;
-	  }
+      @include media($mobile) {
+        margin-bottom: 55px;
+        font-size: 18px;
+      }
       &_type {
         &_small {
           font-size: 25px;
           @include media($desktop-xxl) {
             font-size: 21px;
           }
-		  @include media($mobile) {
-			margin-bottom: 20px;
-			font-size: 15px;
-			line-height: 1.4;
-		  }
+          @include media($mobile) {
+            margin-bottom: 20px;
+            font-size: 15px;
+            line-height: 1.4;
+          }
         }
       }
     }
@@ -97,9 +97,9 @@
       @include media($desktop-xxl) {
         font-size: 18px;
       }
-	  @include media($mobile-xs) {
-		font-size: 16px;
-	  }
+      @include media($mobile-xs) {
+        font-size: 16px;
+      }
     }
   }
 }

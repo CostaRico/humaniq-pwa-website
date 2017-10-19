@@ -11,10 +11,10 @@
   transform: rotate(-90deg);
   &_theme {
     &_dark {
-      color: #000;
+      color: $color-black;
     }
     &_bright {
-      color: #58a1fc;
+      color: $color-main-blue;
     }
   }
   @include media($desktop-xxl) {
@@ -31,9 +31,9 @@
 .se-home-section-button {
   padding: 15px 22px;
   line-height: 1;
-  color: #58a1fc;
-  border: 2px solid #58a1fc;
-  font-family: ProximaNova,sans-serif;
+  color: $color-main-blue;
+  border: 2px solid $color-main-blue;
+  font-family: $font-ProximaNova;
   font-weight: 700;
   font-size: 16.5px;
   letter-spacing: .3em;
@@ -41,11 +41,76 @@
   transition: background-color .3s,color .2s linear;
   cursor: pointer;
   &:hover {
-    background-color: #58a1fc;
-    color: #fff;
+    background-color: $color-main-blue;
+    color: $color-white;
   }
   @include media($desktop-xxl) {
     padding: 9px 15px;
     font-size: 12px;
+  }
+}
+
+
+.se-home-info-columns {
+  $this: &;
+  display: flex;
+  @include media($mobile) {
+    flex-direction: column;
+  }
+  &_type {
+    &_narrow {
+      #{$this}__column {
+        width: 400px;
+        @include media($desktop-xxl) {
+          width: 300px;
+        }
+        @include media($mobile) {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &__column {
+    width: 500px;
+    margin-right: 106px;
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+    @include media($desktop-xxl) {
+      width: 300px;
+      margin-right: 80px;
+    }
+    @include media($mobile) {
+      width: auto;
+      margin-right: 0;
+      margin-bottom: 30px;
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+    &-image {
+      margin-bottom: 25px;
+      width: 70px;
+      height: 74px;
+    }
+    &-title {
+      margin-bottom: 36px;
+      font-size: 31px;
+      font-weight: 700;
+      color: $color-black;
+      @include media($desktop-xxl) {
+        margin-bottom: 24px;
+        font-size: 22px;
+      }
+    }
+    &-text {
+      color: $color-black;
+      font-size: 21px;
+      line-height: 1.3;
+      @include media($desktop-xxl) {
+        font-size: 15px;
+      }
+    }
   }
 }
