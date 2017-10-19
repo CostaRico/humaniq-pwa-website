@@ -14,5 +14,12 @@
     @include media($mobile-xs) {
       padding: 200px 15px 60px;
     }
+    &_type {
+      &_no-padding {
+        @include media($tablet) {
+          padding: 0;
+        }
+      }
+    }
   }
 }

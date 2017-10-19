@@ -13,7 +13,7 @@ const SE_Home_H = () => (
     <EmpoweringSection mix={cn('section')} />
     <FirstMobileSection mix={cn('section')} />
     <UnbankedStatSection mix={cn('section')} />
-    <QuotesSection mix={cn('section')} />
+    <QuotesSection mix={cn('section', {type: 'no-padding'})} />
   </div>
 )
 
